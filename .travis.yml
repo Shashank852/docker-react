@@ -2,10 +2,10 @@ language: generic
 sudo: required
 services:
   - docker
-  
+
 before_install:
   - docker build -t docker-react -f Dockerfile.dev .
-  
+
 script:
   - docker run -e CI=true docker-react npm run test
 
@@ -21,3 +21,7 @@ deploy:
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key:
     secure: "$AWS_SECRET_KEY"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4bc96c78c6f7e068316a1cdb2aa6f3f2a9380461
